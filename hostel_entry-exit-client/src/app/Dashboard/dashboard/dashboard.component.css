@@ -1,0 +1,51 @@
+b/*Navigation Bar*/
+.navbar{
+    background-color: rgb(186, 56, 56);
+    height:60px;
+    width: 100%;
+    position: fixed; /* Set the navbar to fixed position */
+    z-index: 2;
+}
+.navbar .menu{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(13, 17, 20);
+}
+/*Remove bullet points for menu and hoverable menu*/
+ul{
+    list-style-type: none;
+}
+ol{
+    list-style-type: none;
+}
+/*Logo Dessign*/
+.logo{
+    font-family:cursive ;
+    font-size:10mm;
+    font-weight: bold;
+    
+    color: rgb(0, 0, 0);
+}
+ .navbar .flex{
+    display:flex;
+    justify-content:end;
+    align-items: center;
+    height:100%;
+}
+/*Flexbox for Navigation bar*/
+.navbar ul{
+    display: flex;
+}
+.navbar ul li{
+    margin-left:30px ; 
+    margin-right: 20px;   
+}
+/*Change colour on hovering over Navbar elements*/
+.navbar li:hover{
+    color:#000000;
+    cursor: pointer;
+}
+.navbar .hover:hover{
+    color:white;
+    cursor: pointer;
+}
