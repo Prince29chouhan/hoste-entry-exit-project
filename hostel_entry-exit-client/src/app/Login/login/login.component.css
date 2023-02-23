@@ -1,0 +1,9 @@
+*{
+    background-color: rgb(27, 27, 27);
+    color: rgb(149, 153, 153);
+}
+img{
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+  }
