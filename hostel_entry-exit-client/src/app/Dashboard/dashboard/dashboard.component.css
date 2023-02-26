@@ -1,0 +1,6 @@
+.btn{
+    --bs-btn-padding-y: 0.5rem;   
+}
+button, input, optgroup, select, textarea {
+    margin: 14px;
+}
