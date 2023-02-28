@@ -1,7 +1,7 @@
 
 *{
-    background-color: rgb(27, 27, 27);
-    color: rgb(149, 153, 153);
+    /*background-color: rgb(27, 27, 27);*/
+    color: rgb(255, 255, 255);
 }
 img{
     height: 500px;
@@ -12,4 +12,18 @@ img{
     position:relative;
     z-index:2;
     --bs-btn-bg: #198754 !important;
+  }
+  .form-control-lg{
+    border-radius: 0.75rem;
+  }
+  .form-control{
+   background-color: rgb(254, 253, 253);
+    border: 4px solid #b7b9ba;
+  }
+  img[_ngcontent-wie-c18] {
+    height: 450px;
+    width: 470px;
+  }
+  .form{
+    background-color: black ;
   }
