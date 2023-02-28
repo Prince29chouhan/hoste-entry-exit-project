@@ -17,7 +17,7 @@
 </body>
 </html>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style=" border: solid white; border-width: 5px;">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style=" border: solid rgb(27, 27, 27); border-width: 5px;">
   <div class="container-fluid">
     <img src="https://www.cse.iitb.ac.in/images/iitblogowhite.png" alt="" style="height: 60px;">
     <a class="navbar-brand" href="#" style="color: white;">Hostel Entry Exit</a>
@@ -26,23 +26,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <!-- <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" style="color: white;">Home</a>
-        </li> -->
+        
         <button class="btn btn-success navbar-btn" routerLink="/dashboard">Dashboard</button>
-        <button class="btn btn-success navbar-btn" routerLink="/login">Back</button>
+        <button class="btn btn-success navbar-btn" routerLink="/empty">Back</button>
         
       </ul>
       
-      <button class="btn btn-success navbar-btn" routerLink="/"> Log out</button>
+      <button class="btn btn-danger navbar-btn" routerLink="/"> Log out</button>
       
     </div>
   </div>
 </nav>
 <div   >
-<div class="container text-center"  style="margin: 3px;" >
+<div class="container text-center"  style="margin: 3px; align-content: center;" >
+  
   <div class="row">
+    
     <div class="col" style="border: solid white;">
+      <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
       <div class="card" style="width: 15rem;" >
         <img src="https://imgs.search.brave.com/Fb01hv_9_ZkKDdztFAOQl0ebj33lR9KHph5aHGcguEw/rs:fit:464:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5O/MERWZ2pMYW53eHFL/OE5PMUJpTVBRSGFI/ayZwaWQ9QXBp" class="card-img-top" alt="...">
         <div class="card-body">
@@ -50,40 +51,75 @@
           <p class="card-text"><h2>Visitor 1</h2>
         </div>
         <ul class="list-group list-group-flush">
-          <button class="btn btn-dark"   type="button" style="border: dotted white;">
+          <button class="btn btn-dark"   type="button" style="border:solid white;" disabled>
           <li class="list-group-item" ><h3 >Name :</h3></li> </button>
-          <button class="btn btn-dark"   type="button" style="border: dotted white;">
+          <button class="btn btn-dark"   type="button" style="border:solid white;" disabled>
           <li class="list-group-item"><h3>Hostel no. : </h3> </li></button>
-          <button class="btn btn-dark"   type="button" style="border: dotted white ;">
+          <button class="btn btn-dark"   type="button" style="border: solid white ;" disabled>
           <li class="list-group-item"><h3>Room no. : </h3></li></button>
-          <button class="btn btn-dark"   type="button" style="border: dotted white;">
+          <button class="btn btn-dark"   type="button" style="border: solid white;" disabled>
           <li class="list-group-item"><h3>Entry Time : </h3></li></button>
+         
+        </ul> 
         
-        </ul>
-        
-      </div>
-    </div>
-    <div class="col order-5">
-      <div style="border: solid white;" >
-        <div class="card" style="width: 15rem; ">
-          <img src="https://imgs.search.brave.com/Fb01hv_9_ZkKDdztFAOQl0ebj33lR9KHph5aHGcguEw/rs:fit:464:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5O/MERWZ2pMYW53eHFL/OE5PMUJpTVBRSGFI/ayZwaWQ9QXBp" class="card-img-top" alt="..." >
-          <div class="card-body">
+      </div> </button>
+      <!-- html for 1st popup -->
+
+  <div class="modal" id="myModal" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="border: solid rgb(149, 153, 153);">
+                <h1 class="modal-title">Visitor 1</h1>
+                <button type="button" class="btn-close " data-bs-dismiss="modal" style="border: solid white;  color: white;"></button>
+            </div>
+            <div class="modal-body" style="border: rgb(149, 153, 153);">
+              <h3>Name :</h3>
+              <h3>Roll no. :</h3>
+              <h3>Hostel :</h3>
+              <h3>Entry Time :</h3>
+              <h3>Exit Time :</h3>
+              <h3></h3>
+                
+            </div>
             
-            <p class="card-text"><h2>Visitor 2</h2> 
-          </div>
-          <ul class="list-group list-group-flush">
-            <button class="btn btn-dark"   type="button" style="border: dotted white;">
-            <li class="list-group-item" ><h3>Name : </h3></li></button>
-            <button class="btn btn-dark"   type="button" style="border: dotted white;">
-            <li class="list-group-item"><h3>Hostel no. :</h3></li></button>
-            <button class="btn btn-dark"   type="button" style="border: dotted white;">
-            <li class="list-group-item"><h3>Room no. :</h3></li></button>
-            <button class="btn btn-dark"   type="button" style="border: dotted;">
-            <li class="list-group-item"><h3>Entry Time :</h3></li></button>
-          </ul>
-          
         </div>
     </div>
+  </div>
     
   </div>
-</div>
+    
+    <div class="col" style="border: solid white;">
+      <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
+      <div class="card" style="width: 15rem;" >
+        <img src="https://imgs.search.brave.com/Fb01hv_9_ZkKDdztFAOQl0ebj33lR9KHph5aHGcguEw/rs:fit:464:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5O/MERWZ2pMYW53eHFL/OE5PMUJpTVBRSGFI/ayZwaWQ9QXBp" class="card-img-top" alt="...">
+        <div class="card-body">
+        
+          <p class="card-text"><h2>Visitor 2</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+          <button class="btn btn-dark"   type="button" style="border:solid white;" disabled>
+          <li class="list-group-item" ><h3 >Name :</h3></li> </button>
+          <button class="btn btn-dark"   type="button" style="border:solid white;" disabled>
+          <li class="list-group-item"><h3>Hostel no. : </h3> </li></button>
+          <button class="btn btn-dark"   type="button" style="border: solid white ;" disabled>
+          <li class="list-group-item"><h3>Room no. : </h3></li></button>
+          <button class="btn btn-dark"   type="button" style="border: solid white;" disabled>
+          <li class="list-group-item"><h3>Entry Time : </h3></li></button>
+         
+        </ul> 
+        
+      </div> </button>
+      
+
+            
+        
+    </div>
+  </div>
+</div>   
+   
+    
+  
+
+
+
+  

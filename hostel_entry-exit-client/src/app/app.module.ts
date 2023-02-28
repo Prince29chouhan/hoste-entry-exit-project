@@ -8,6 +8,7 @@ import { LoginComponent } from './Login/login/login.component';
 import { DashbComponent } from './dashb/dashb.component';
 import { NewcompComponent } from './newcomp/newcomp.component';
 import { HistoryComponent } from './History/history/history.component';
+import { EmptyComponent } from './empty/empty.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HistoryComponent } from './History/history/history.component';
     LoginComponent,
     DashbComponent,
     NewcompComponent,
-    HistoryComponent
+    HistoryComponent,
+    EmptyComponent
   ],
   imports: [
     BrowserModule,
