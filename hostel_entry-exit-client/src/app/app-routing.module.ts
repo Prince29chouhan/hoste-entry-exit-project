@@ -6,6 +6,7 @@ import { EmptyComponent } from './empty/empty.component';
 import { LoginComponent } from './Login/login/login.component';
 import { NewcompComponent } from './newcomp/newcomp.component';
 import { HistoryComponent } from './History/history/history.component';
+import { TestapiComponent } from './TestApi/testapi/testapi.component';
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'newcomp', component:NewcompComponent},
   {path:'empty', component:EmptyComponent},
   {path:'history', component:HistoryComponent},
+  {path:'testapi', component:TestapiComponent}
 
 ];
 
