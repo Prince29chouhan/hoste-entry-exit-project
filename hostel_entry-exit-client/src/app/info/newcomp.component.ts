@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+
+import { HttpClient } from '@angular/common/http';
+import { Component, NgModule } from '@angular/core';
+import { API } from '../interface'
+import { rollno1 } from '../interface';
+
 
 @Component({
   selector: 'app-newcomp',
@@ -6,5 +11,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./newcomp.component.css']
 })
 export class NewcompComponent {
-
+  
 }
+
