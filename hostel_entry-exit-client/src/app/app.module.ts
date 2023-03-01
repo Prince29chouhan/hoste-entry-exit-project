@@ -9,6 +9,8 @@ import { NewcompComponent } from './newcomp/newcomp.component';
 import { HistoryComponent } from './History/history/history.component';
 import { EmptyComponent } from './empty/empty.component';
 import { TestapiComponent } from './TestApi/testapi/testapi.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { TestapiComponent } from './TestApi/testapi/testapi.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

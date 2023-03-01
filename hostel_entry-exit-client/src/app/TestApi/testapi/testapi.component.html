@@ -1,1 +1,22 @@
-<p>testapi works!</p>
+<div class="form-outline mb-4">
+    <input type="email" id="form1Example13" class="form-control form-control-lg" [(ngModel)]="name_1" />
+    <label class="form-label" for="form1Example13">Name1</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form1Example23" class="form-control form-control-lg" [(ngModel)]="name_2"/>
+    <label class="form-label" for="form1Example23">Name2</label>
+  </div>
+<div class="form-outline mb-4">
+    <input type="email" id="form1Example13" class="form-control form-control-lg" [(ngModel)]="rollnum_1" />
+    <label class="form-label" for="form1Example13">Roll1</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form1Example23" class="form-control form-control-lg"[(ngModel)]="rollnum_2" />
+    <label class="form-label" for="form1Example23">Roll2</label>
+  </div>
+  <button  class="btn btn-success btn-lg btn-block" onclick="callapi()" >Sign in</button>
+
