@@ -10,6 +10,7 @@ import { HistoryComponent } from './History/history/history.component';
 import { EmptyComponent } from './empty/empty.component';
 import { TestapiComponent } from './TestApi/testapi/testapi.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
