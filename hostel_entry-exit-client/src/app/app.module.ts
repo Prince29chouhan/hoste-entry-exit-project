@@ -8,6 +8,7 @@ import { DashbComponent } from './dashb/dashb.component';
 import { NewcompComponent } from './newcomp/newcomp.component';
 import { HistoryComponent } from './History/history/history.component';
 import { EmptyComponent } from './empty/empty.component';
+import { TestapiComponent } from './TestApi/testapi/testapi.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmptyComponent } from './empty/empty.component';
     NewcompComponent,
     HistoryComponent,
     
-    EmptyComponent
+    EmptyComponent,
+          TestapiComponent
   ],
   imports: [
     BrowserModule,
