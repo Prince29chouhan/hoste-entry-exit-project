@@ -19,7 +19,7 @@ ngOnInit(){
   if(localStorage.getItem('h_num') != null)
   {
     this.router.navigate(
-      ['/info']
+      ['/empty']
     )
 
   }
@@ -32,7 +32,7 @@ ngOnInit(){
       this.http.get<hostel>('http://127.0.0.1:8000/hostels/'+this.user_id).subscribe((result:any)=>{
      if(result.username==this.sign.user_id && result.password==this.sign.password){
       localStorage.setItem('h_num',result.h_num)
-      this.router.navigate( ['/info'])
+      this.router.navigate( ['/empty'])
      }
     else{
       alert("Wrong password or User ID")  

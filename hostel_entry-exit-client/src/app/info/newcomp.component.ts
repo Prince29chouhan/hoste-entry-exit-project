@@ -1,6 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
+import { Router,Route } from '@angular/router';
 
 
 
@@ -10,8 +11,19 @@ import { Component, NgModule } from '@angular/core';
   styleUrls: ['./newcomp.component.css']
 })
 export class NewcompComponent {
+  constructor(
+    private http:HttpClient, private router:Router
+      ){}
 
-  constructor(){}
+  deleteKey(){
+    localStorage.removeItem('h_num') 
+    
+      this.router.navigate(
+        ['/login']
+      )
+  
+    
+  }  constructor(){}
 
   ngOnInit():void {
     //get dono users
