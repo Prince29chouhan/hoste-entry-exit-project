@@ -61,7 +61,7 @@ export class NewcompComponent {
   deleteKey(){
     localStorage.removeItem('h_num') 
       this.router.navigate(
-        ['/login']
+        ['/']
       )   
   }
 
