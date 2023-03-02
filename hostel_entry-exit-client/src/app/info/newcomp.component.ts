@@ -2,6 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
 import { Router,Route } from '@angular/router';
+import { tempdata, database } from '../interface';
 
 
 
@@ -31,7 +32,7 @@ export class NewcompComponent {
   }
 
   sendData(){
-    
+    //callapi '/tempdata' store tempdata_object 
   }
  
 }
