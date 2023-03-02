@@ -15,13 +15,13 @@ export class NewcompComponent {
     private http:HttpClient, private router:Router
       ){}
  
-  del(){
-    (localStorage.removeItem('h_num') != null)
-    {
+  deleteKey(){
+    localStorage.removeItem('h_num') 
+    
       this.router.navigate(
         ['/login']
       )
   
-    }
+    
   }}
 
