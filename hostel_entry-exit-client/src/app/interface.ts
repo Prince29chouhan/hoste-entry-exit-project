@@ -14,6 +14,15 @@ export class tempdatawtime{
     h_num!:string
     in_time!:string
 }
+export class databasewtime{
+    rollnum_1!: string
+    rollnum_2!: string
+    name_1!: string
+    name_2!: string
+    in_time!:string
+    out_time!:string
+    h_num!:string
+}
 
 
 export class database{

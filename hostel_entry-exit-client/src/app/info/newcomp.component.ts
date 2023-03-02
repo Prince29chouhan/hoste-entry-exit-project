@@ -82,7 +82,7 @@ export class NewcompComponent {
     this.present=true;
    }   
   }) 
-  
+
   if(this.present==true){
      this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{}) 
   }
