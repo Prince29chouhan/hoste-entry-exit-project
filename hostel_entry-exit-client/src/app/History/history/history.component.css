@@ -5,3 +5,14 @@
 button, input, optgroup, select, textarea {
     margin: 14px;
 }
+.flex-data{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+   justify-content: space-between;
+    padding: 30px 0px ;
+}
+
+.data-item{
+    width: 14vw;
+}

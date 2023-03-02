@@ -9,10 +9,10 @@ button, input, optgroup, select, textarea {
     display:flex;
     flex-direction: row;
     width: 100%;
-    border-bottom: 4px solid white;
-    padding: 10px;
+  
+    padding: 30px 0px ;
 }
 
 .data-item{
-    width: 20vw;
+    width: 18vw;
 }
