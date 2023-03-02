@@ -27,13 +27,13 @@ export class NewcompComponent {
   user3:user = {} as user
 
   nodata:boolean=true
-      
-  ngOnInit():void {    
+  hostel_visit!:string    
+
+  ngOnInit():void {   
+    this.hostel_visit = localStorage.getItem('h_num')! 
   }
 
   getusers(){   
-    var hostel_visit = localStorage.getItem('h_num')
-
     this.http.get<any>('http://127.0.0.1:8000/users/'+this.rollnum_1).subscribe((result:any)=>{ 
     this.user1 = result
   })
@@ -43,9 +43,18 @@ export class NewcompComponent {
      
   this.nodata =false
   setTimeout(() => {
-    this.name_1 = this.user1.name
+    if(this.hostel_visit == this.user2.hostel_no){
+    this.name_1 = this.user2.name
+    this.name_2 = this.user1.name
+    this.rollnum_1 = this.user2.roll_no
+    this.rollnum_2 = this.user1.roll_no}
+    else{
+      this.name_1 = this.user1.name
+      this.name_2 = this.user2.name
+      this.rollnum_1 = this.user1.roll_no
+      this.rollnum_2 = this.user2.roll_no}
   }, 1000);
-  
+
    
   }
 
@@ -57,7 +66,6 @@ export class NewcompComponent {
   }
 
   sendData(){
-    console.log(this.name_1);
   this.tempcall.name_1=this.name_1;
   this.tempcall.name_2=this.name_2;
   this.tempcall.rollnum_1=this.rollnum_1;
