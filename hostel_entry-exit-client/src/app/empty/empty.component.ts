@@ -48,6 +48,7 @@ export class EmptyComponent {
 
   //set both users ka name, hostel, roll number
   //localStorage.setItem()
+  //redirect to info
   }
   }
   
