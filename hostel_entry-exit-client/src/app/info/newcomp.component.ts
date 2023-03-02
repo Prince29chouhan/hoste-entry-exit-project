@@ -20,12 +20,12 @@ export class NewcompComponent {
   name_2:string='';
   rollnum_1:string='';
   rollnum_2:string='';
-  tempcall:tempdata= {} as tempdata;
   present:boolean=false;
 
   user1:user = {} as user
   user2:user = {} as user
   user3:user = {} as user
+  tempcall:tempdata= {} as tempdata;
 
   nodata:boolean=true
   hostel_visit!:string    
@@ -73,11 +73,15 @@ export class NewcompComponent {
     this.tempcall.name_2=this.name_2;
     this.tempcall.rollnum_1=this.rollnum_1;
     this.tempcall.rollnum_2=this.rollnum_2;
-    this.tempcall.h_num=this.user1.hostel_no;        
-  
-    this.http.get<any>('http://127.0.0.1:8000/tempdata/'+'12345').subscribe((result:any)=>{
-   if(result.name_1== null){
-    this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{}) 
+    this.tempcall.h_num=this.user1.hostel_no;       
+    
+    console.log('clicked');
+      
+    this.http.get<any>('http://127.0.0.1:8000/tempdata/'+this.rollnum_1).subscribe((result:any)=>{console.log(result);
+    
+      if((result.name_1== null) || (this.rollnum_2 != result.rollnum_2)){
+
+        this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);})
     }   
   }) 
 
