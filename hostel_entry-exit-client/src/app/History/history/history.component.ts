@@ -18,7 +18,7 @@ export class HistoryComponent {
   ){}
   ngOnInit():void {
     this.h_num = localStorage.getItem('h_num')!
-    this.http.get<databasewtime>('http://127.0.0.1:8000/tempdata/').subscribe((res:any)=>
+    this.http.get<databasewtime>('http://127.0.0.1:8000/database/').subscribe((res:any)=>
     this.indata = res
     )
   }

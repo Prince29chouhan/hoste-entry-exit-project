@@ -73,19 +73,14 @@ export class NewcompComponent {
     this.tempcall.name_2=this.name_2;
     this.tempcall.rollnum_1=this.rollnum_1;
     this.tempcall.rollnum_2=this.rollnum_2;
-    this.tempcall.h_num=this.user1.hostel_no
-    
-
-
-    this.http.get<tempdata>('http://127.0.0.1:8000/tempdata/'+this.tempcall.name_1).subscribe((result:any)=>{
-   if(result== null){
-    this.present=true;
-   }   
+    this.tempcall.h_num=this.user1.hostel_no;        
+  
+    this.http.get<any>('http://127.0.0.1:8000/tempdata/'+'12345').subscribe((result:any)=>{
+   if(result.name_1== null){
+    this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{}) 
+    }   
   }) 
 
-  if(this.present==true){
-     this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{}) 
-  }
   }
  
 }
