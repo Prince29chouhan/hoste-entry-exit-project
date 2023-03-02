@@ -2,6 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
 import { database, user } from '../interface'
+import { Router,Route } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,8 @@ import { database, user } from '../interface'
 })
 export class EmptyComponent {
   constructor(
-    private http:HttpClient
+    private http:HttpClient,
+    private router:Router
       ){}
   
    name_1:string='';
@@ -47,10 +49,23 @@ export class EmptyComponent {
   }
 
   //set both users ka name, hostel, roll number
-  //localStorage.setItem()
+  localStorage.setItem('user1.name',this.user1.name)
+  localStorage.setItem('user1.hostel_no',this.user1.hostel_no)
+  localStorage.setItem('user1.roll_no',this.user1.roll_no)
+
+  localStorage.setItem('user2.name',this.user1.name)
+  localStorage.setItem('user2.hostel_no',this.user1.hostel_no)
+  localStorage.setItem('user2.roll_no',this.user1.roll_no)
+  
   //redirect to info
+  
+      this.router.navigate(
+        ['/info']
+      )  
   }
+
   }
+  
   
 
 
