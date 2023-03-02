@@ -16,16 +16,26 @@ export class NewcompComponent {
     private http:HttpClient,
     private router:Router
   ){}
+<<<<<<< HEAD
  
   user1:user= {} as user; 
   user2:user= {} as user; 
 
+=======
+>>>>>>> 0507bafd4de33afa4e6b28411afc275ad746572d
   name_1:string='';
   name_2:string='';
   rollnum_1:string='';
   rollnum_2:string='';
   tempcall:tempdata= {} as tempdata;
+
+  user1:user = {} as user
+  user2:user = {} as user
+  user3:user = {} as user
+
+  nodata:boolean=true
       
+<<<<<<< HEAD
 
   ngOnInit():void {
     this.user1.name!=localStorage.getItem('user1.name')
@@ -40,10 +50,27 @@ export class NewcompComponent {
     localStorage.removeItem('user2.roll_no')
     localStorage.removeItem('user1.hostel_no')
     localStorage.removeItem('user2.hostel_no')
+=======
+  ngOnInit():void {    
+  }
+
+  getusers(){   
+    var hostel_visit = localStorage.getItem('h_num')
+
+    this.http.get<any>('http://127.0.0.1:8000/users/'+this.rollnum_1).subscribe((result:any)=>{ 
+    this.user1 = result
+  })
+  this.http.get<any>('http://127.0.0.1:8000/users/'+this.rollnum_2).subscribe(result=>{
+    this.user2 = result
+  }) 
+     
+  this.nodata =false
+  setTimeout(() => {
+    this.name_1 = this.user1.name
+  }, 1000);
+  
+>>>>>>> 0507bafd4de33afa4e6b28411afc275ad746572d
    
-    //localStorage.getItem()
-    //store in variables fir remove both from localstorage
-    //localStorage.removeItem
   }
 
   deleteKey(){
@@ -54,10 +81,12 @@ export class NewcompComponent {
   }
 
   sendData(){
-    this.tempcall.name_1=this.name_1;
+    console.log(this.name_1);
+  this.tempcall.name_1=this.name_1;
   this.tempcall.name_2=this.name_2;
   this.tempcall.rollnum_1=this.rollnum_1;
   this.tempcall.rollnum_2=this.rollnum_2;
+  this.tempcall.h_num=this.user1.hostel_no
 
   this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);}) 
   }

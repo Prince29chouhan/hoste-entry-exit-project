@@ -3,6 +3,7 @@ export class tempdata{
     rollnum_2!: string
     name_1!: string
     name_2!: string
+    h_num!:string
 }
 
 export class database{
