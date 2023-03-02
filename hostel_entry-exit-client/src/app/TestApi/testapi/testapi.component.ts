@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
-import { API } from '../../interface'
+import { database } from '../../interface'
 
 @Component({
   selector: 'app-testapi',
@@ -17,7 +17,7 @@ constructor(
  name_2:string='';
  rollnum_1:string='';
  rollnum_2:string='';
- apicall:API= {} as API;
+ apicall:database= {} as database;
 
 
  callapi(){
@@ -26,6 +26,6 @@ constructor(
   this.apicall.rollnum_1=this.rollnum_1;
   this.apicall.rollnum_2=this.rollnum_2;
 
-  this.http.post<API>('http://127.0.0.1:8000/database/',this.apicall).subscribe((result:any)=>{console.log(result);})
+  this.http.post<database>('http://127.0.0.1:8000/database/',this.apicall).subscribe((result:any)=>{console.log(result);})
  }
 }

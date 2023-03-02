@@ -1,8 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
-import { API } from '../interface'
-import { rollno1 } from '../interface';
+
 
 
 @Component({
@@ -11,6 +10,6 @@ import { rollno1 } from '../interface';
   styleUrls: ['./newcomp.component.css']
 })
 export class NewcompComponent {
-  
+
 }
 
