@@ -12,26 +12,24 @@ import { Router,Route } from '@angular/router';
 })
 export class NewcompComponent {
   constructor(
-    private http:HttpClient, private router:Router
-      ){}
-
-  deleteKey(){
-    localStorage.removeItem('h_num') 
-    
-      this.router.navigate(
-        ['/login']
-      )
-  
-    
-  }  constructor(){}
-
+    private http:HttpClient,
+    private router:Router
+  ){}
+      
   ngOnInit():void {
     //get dono users
     //localStorage.getItem()
     //store in variables fir remove both from localstorage
     //localStorage.removeItem
   }
-  
+
+  deleteKey(){
+    localStorage.removeItem('h_num') 
+      this.router.navigate(
+        ['/login']
+      )   
+  }
+
   sendData(){
     
   }
