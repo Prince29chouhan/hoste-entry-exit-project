@@ -16,17 +16,17 @@ export class NewcompComponent {
     private http:HttpClient,
     private router:Router
   ){}
-<<<<<<< HEAD
+ 
   user1:user= {} as user; 
   user2:user= {} as user; 
-=======
+
   name_1:string='';
   name_2:string='';
   rollnum_1:string='';
   rollnum_2:string='';
   tempcall:tempdata= {} as tempdata;
       
->>>>>>> d282f33ca26c4af4b6e050cefd5c6dcfb2a8f1c2
+
   ngOnInit():void {
     this.user1.name!=localStorage.getItem('user1.name')
     this.user2.name!=localStorage.getItem('user2.name')
