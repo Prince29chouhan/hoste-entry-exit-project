@@ -8,5 +8,11 @@ button, input, optgroup, select, textarea {
 .flex-data{
     display:flex;
     flex-direction: row;
-    
+    width: 100%;
+    border-bottom: 4px solid white;
+    padding: 10px;
+}
+
+.data-item{
+    width: 20vw;
 }

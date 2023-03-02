@@ -17,13 +17,10 @@
 <div class="bg-secondary" >
   <div class="d-grid gap-0.1" *ngFor=" let data of indata">
     <div class="flex-data" *ngIf="data.h_num == h_num">
-    
-      <div class="d-flex mr-5 ml-5">
-        <div>{{data.name_1}}</div>
-        <div>{{data.name_2}}</div>
-        <div>{{data.rollnum_1}}</div>
-        <div>{{data.rollnum_2}}</div>            
-      </div>
-   
+      <div class="data-item">{{data.name_1}}</div>
+      <div class="data-item">{{data.name_2}}</div>
+      <div class="data-item">{{data.rollnum_1}}</div>
+      <div class="data-item">{{data.rollnum_2}}</div>            
+      <div class="data-item">{{data.in_time}}</div>   
   </div></div>
   

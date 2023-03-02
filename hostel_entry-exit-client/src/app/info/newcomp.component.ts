@@ -77,14 +77,14 @@ export class NewcompComponent {
     
 
 
-    this.http.get<tempdata>('http://127.0.0.1:8000/tempdata/'+this.tempcall.name_1).subscribe((result:any)=>{console.log(result);
-   if(result.name_1== null){
+    this.http.get<tempdata>('http://127.0.0.1:8000/tempdata/'+this.tempcall.name_1).subscribe((result:any)=>{
+   if(result== null){
     this.present=true;
    }   
   }) 
   
   if(this.present==true){
-     this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);}) 
+     this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{}) 
   }
   }
  

@@ -20,6 +20,8 @@ export class DashboardComponent {
 
   ngOnInit():void {
     this.h_num = localStorage.getItem('h_num')!
+    console.log(this.h_num);
+    
     this.http.get<tempdatawtime>('http://127.0.0.1:8000/tempdata/').subscribe((res:any)=>
     this.indata = res
     )
