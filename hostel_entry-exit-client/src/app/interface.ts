@@ -15,9 +15,9 @@ export class database{
 
 
 export class user{
-    hostel_no!: number
+    hostel_no!: string
     name!: string
-    room_no!:  number
+    room_no!:  string
     roll_no!:  string
     
 }
