@@ -43,6 +43,8 @@ export class NewcompComponent {
      
   this.nodata =false
   setTimeout(() => {
+    console.log(this.user2.hostel_no);
+    
     if(this.hostel_visit == this.user2.hostel_no){
     this.name_1 = this.user2.name
     this.name_2 = this.user1.name
@@ -70,9 +72,13 @@ export class NewcompComponent {
   this.tempcall.name_2=this.name_2;
   this.tempcall.rollnum_1=this.rollnum_1;
   this.tempcall.rollnum_2=this.rollnum_2;
-  this.tempcall.h_num=this.user1.hostel_no
+  this.tempcall.h_num=this.hostel_visit;
 
-  this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);}) 
+  console.log(this.tempcall);
+  
+
+  this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{
+    console.log(result);}) 
   }
  
 }
