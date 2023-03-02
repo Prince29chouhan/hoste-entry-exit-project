@@ -10,6 +10,19 @@ import { Component, NgModule } from '@angular/core';
   styleUrls: ['./newcomp.component.css']
 })
 export class NewcompComponent {
+
+  constructor(){}
+
+  ngOnInit():void {
+    //get dono users
+    //localStorage.getItem()
+    //store in variables fir remove both from localstorage
+    //localStorage.removeItem
+  }
+  
+  sendData(){
+    
+  }
  
 }
 
