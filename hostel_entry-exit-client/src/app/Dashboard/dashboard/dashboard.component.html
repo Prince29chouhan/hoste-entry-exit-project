@@ -16,15 +16,14 @@
 </nav>
 <div class="bg-secondary" >
   <div class="d-grid gap-0.1" *ngFor=" let data of indata">
-    <div *ngIf="data.h_num == h_num">
-    <button class="btn btn-dark"  style= "--bs-btn-padding-y: 2.75rem;" type="button" id="top">
-      <div class="d-flex justify-content-between mr-5 ml-5">
-        <h3>{{data.name_1}}</h3>
-        <h3>{{data.name_2}}</h3>
-        <h3>{{data.rollnum_1}}</h3>
-        <h3>{{data.rollnum_2}}</h3>       
-              
+    <div class="flex-data" *ngIf="data.h_num == h_num">
+    
+      <div class="d-flex mr-5 ml-5">
+        <div>{{data.name_1}}</div>
+        <div>{{data.name_2}}</div>
+        <div>{{data.rollnum_1}}</div>
+        <div>{{data.rollnum_2}}</div>            
       </div>
-    </button>
+   
   </div></div>
   

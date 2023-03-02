@@ -21,6 +21,7 @@ export class NewcompComponent {
   rollnum_1:string='';
   rollnum_2:string='';
   tempcall:tempdata= {} as tempdata;
+  present:boolean=false;
 
   user1:user = {} as user
   user2:user = {} as user
@@ -63,22 +64,28 @@ export class NewcompComponent {
   deleteKey(){
     localStorage.removeItem('h_num') 
       this.router.navigate(
-        ['/login']
+        ['/']
       )   
   }
 
   sendData(){
-  this.tempcall.name_1=this.name_1;
-  this.tempcall.name_2=this.name_2;
-  this.tempcall.rollnum_1=this.rollnum_1;
-  this.tempcall.rollnum_2=this.rollnum_2;
-  this.tempcall.h_num=this.hostel_visit;
+    this.tempcall.name_1=this.name_1;
+    this.tempcall.name_2=this.name_2;
+    this.tempcall.rollnum_1=this.rollnum_1;
+    this.tempcall.rollnum_2=this.rollnum_2;
+    this.tempcall.h_num=this.user1.hostel_no
+    
 
-  console.log(this.tempcall);
+
+    this.http.get<tempdata>('http://127.0.0.1:8000/tempdata/'+this.tempcall.name_1).subscribe((result:any)=>{console.log(result);
+   if(result.name_1== null){
+    this.present=true;
+   }   
+  }) 
   
-
-  this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{
-    console.log(result);}) 
+  if(this.present==true){
+     this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);}) 
+  }
   }
  
 }

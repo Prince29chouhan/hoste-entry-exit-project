@@ -5,3 +5,8 @@
 button, input, optgroup, select, textarea {
     margin: 14px;
 }
+.flex-data{
+    display:flex;
+    flex-direction: row;
+    
+}
