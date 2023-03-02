@@ -10,6 +10,6 @@ import { Component, NgModule } from '@angular/core';
   styleUrls: ['./newcomp.component.css']
 })
 export class NewcompComponent {
-
+ 
 }
 

@@ -13,3 +13,9 @@ export class user{
     roll_no!:  string
     
 }
+
+export class hostel{
+    user_id!:string
+    password!:string
+    hostel_no!:string
+}

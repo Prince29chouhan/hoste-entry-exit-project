@@ -9,7 +9,8 @@ import { HistoryComponent } from './History/history/history.component';
 import { TestapiComponent } from './TestApi/testapi/testapi.component';
 
 const routes: Routes = [
-  {path:'', component:LoginComponent},
+  {path:'', redirectTo:"login"},
+  {path:'login', component:LoginComponent},
   {path:'dashboard', component:DashboardComponent},
   {path:'info', component:NewcompComponent},
   {path:'empty', component:EmptyComponent},
