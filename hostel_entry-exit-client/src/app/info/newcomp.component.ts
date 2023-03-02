@@ -16,13 +16,6 @@ export class NewcompComponent {
     private http:HttpClient,
     private router:Router
   ){}
-<<<<<<< HEAD
- 
-  user1:user= {} as user; 
-  user2:user= {} as user; 
-
-=======
->>>>>>> 0507bafd4de33afa4e6b28411afc275ad746572d
   name_1:string='';
   name_2:string='';
   rollnum_1:string='';
@@ -34,29 +27,13 @@ export class NewcompComponent {
   user3:user = {} as user
 
   nodata:boolean=true
-      
-<<<<<<< HEAD
+  hostel_visit!:string    
 
-  ngOnInit():void {
-    this.user1.name!=localStorage.getItem('user1.name')
-    this.user2.name!=localStorage.getItem('user2.name')
-    this.user1.roll_no!=localStorage.getItem('user1.roll_no')
-    this.user2.roll_no!=localStorage.getItem('user2.roll_no')
-    this.user1.hostel_no!=localStorage.getItem('user1.hostel_no')
-    this.user2.hostel_no!=localStorage.getItem('user2.hostel_no')
-    localStorage.removeItem('user1.name')
-    localStorage.removeItem('user2.name')
-    localStorage.removeItem('user1.roll_no')
-    localStorage.removeItem('user2.roll_no')
-    localStorage.removeItem('user1.hostel_no')
-    localStorage.removeItem('user2.hostel_no')
-=======
-  ngOnInit():void {    
+  ngOnInit():void {   
+    this.hostel_visit = localStorage.getItem('h_num')! 
   }
 
   getusers(){   
-    var hostel_visit = localStorage.getItem('h_num')
-
     this.http.get<any>('http://127.0.0.1:8000/users/'+this.rollnum_1).subscribe((result:any)=>{ 
     this.user1 = result
   })
@@ -66,10 +43,18 @@ export class NewcompComponent {
      
   this.nodata =false
   setTimeout(() => {
-    this.name_1 = this.user1.name
+    if(this.hostel_visit == this.user2.hostel_no){
+    this.name_1 = this.user2.name
+    this.name_2 = this.user1.name
+    this.rollnum_1 = this.user2.roll_no
+    this.rollnum_2 = this.user1.roll_no}
+    else{
+      this.name_1 = this.user1.name
+      this.name_2 = this.user2.name
+      this.rollnum_1 = this.user1.roll_no
+      this.rollnum_2 = this.user2.roll_no}
   }, 1000);
-  
->>>>>>> 0507bafd4de33afa4e6b28411afc275ad746572d
+
    
   }
 
@@ -81,7 +66,6 @@ export class NewcompComponent {
   }
 
   sendData(){
-    console.log(this.name_1);
   this.tempcall.name_1=this.name_1;
   this.tempcall.name_2=this.name_2;
   this.tempcall.rollnum_1=this.rollnum_1;
