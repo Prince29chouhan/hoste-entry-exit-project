@@ -14,10 +14,7 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'dashboard', component:DashboardComponent},
   {path:'info', component:NewcompComponent},
-  {path:'empty', component:EmptyComponent},
   {path:'history', component:HistoryComponent},
-  {path:'testapi', component:TestapiComponent},
-  { path:'dashb', component:DashbComponent}
 
 ];
 

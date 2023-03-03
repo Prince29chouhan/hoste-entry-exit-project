@@ -22,5 +22,9 @@ export class HistoryComponent {
     this.indata = res
     )
   }
+  logout(){
+    localStorage.removeItem('h_num')
+    this.router.navigate(['/'])
+  }
 
 }

@@ -27,4 +27,9 @@ export class DashboardComponent {
     )
   }
 
+  logout(){
+    localStorage.removeItem('h_num')
+    this.router.navigate(['/'])
+  }
+
 }
