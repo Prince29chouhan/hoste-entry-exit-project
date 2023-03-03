@@ -35,6 +35,7 @@ export class NewcompComponent {
 
   ngOnInit():void {   
     this.hostel_visit = localStorage.getItem('h_num')! 
+    console.log(this.hostel_visit)
   }
 
   getusers(){   
@@ -59,6 +60,7 @@ export class NewcompComponent {
       this.name_2 = this.user2.name
       this.rollnum_1 = this.user1.roll_no
       this.rollnum_2 = this.user2.roll_no}
+      console.log(this.rollnum_1,this.rollnum_2)
   }, 1000);
 
    
@@ -76,7 +78,8 @@ export class NewcompComponent {
     this.tempcall.name_2=this.name_2;
     this.tempcall.rollnum_1=this.rollnum_1;
     this.tempcall.rollnum_2=this.rollnum_2;
-    this.tempcall.h_num=this.user1.hostel_no;       
+    this.tempcall.h_num=this.hostel_visit;  
+    console.log(this.tempcall.h_num)     
     
     
   this.http.get<any>('http://127.0.0.1:8000/tempdata/'+this.rollnum_1).subscribe((result:any)=>{
