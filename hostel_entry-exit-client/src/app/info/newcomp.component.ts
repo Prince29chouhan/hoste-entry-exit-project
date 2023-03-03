@@ -2,7 +2,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, NgModule } from '@angular/core';
 import { Router,Route } from '@angular/router';
-import { tempdata, user } from '../interface';
+import { database, databasewtime, tempdata, tempdatawtime, user } from '../interface';
 
 
 
@@ -26,8 +26,11 @@ export class NewcompComponent {
   user2:user = {} as user
   user3:user = {} as user
   tempcall:tempdata= {} as tempdata;
+  tempcallwtime:tempdatawtime = {} as tempdatawtime
+  datawtime:databasewtime = {} as databasewtime
 
   nodata:boolean=true
+  temdata:boolean=false
   hostel_visit!:string    
 
   ngOnInit():void {   
@@ -75,17 +78,28 @@ export class NewcompComponent {
     this.tempcall.rollnum_2=this.rollnum_2;
     this.tempcall.h_num=this.user1.hostel_no;       
     
-    console.log('clicked');
-      
-    this.http.get<any>('http://127.0.0.1:8000/tempdata/'+this.rollnum_1).subscribe((result:any)=>{console.log(result);
     
-      if((result.name_1== null) || (this.rollnum_2 != result.rollnum_2)){
+  this.http.get<any>('http://127.0.0.1:8000/tempdata/'+this.rollnum_1).subscribe((result:any)=>{
+     console.log(result);
+     this.tempcallwtime = result
 
-        this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((result:any)=>{console.log(result);})
-    }   
+    if(result.rollnum_2==this.tempcall.rollnum_2 && result.h_num == this.tempcall.h_num){this.temdata = true
+    this.http.post<database>('http://127.0.0.1:8000/database/',this.tempcallwtime).subscribe((res:any)=>
+    {})
+    this.http.delete<tempdata>('http://127.0.0.1:8000/tempdata/'+this.rollnum_1).subscribe((res:any)=>{}
+    )}
+    else if(result.rollnum_2!=this.tempcall.rollnum_2){console.log('Student Mismatch');this.temdata = true
+    }
+    else if(result.h_num == this.tempcall.h_num){console.log('Hostel Mismatch');this.temdata = true
+    }
   }) 
+  console.log(this.temdata);
+  
+  if(!this.temdata){
+    this.http.post<tempdata>('http://127.0.0.1:8000/tempdata/',this.tempcall).subscribe((res:any)=>{        
+    })
+  }  
 
-  }
- 
+  } 
 }
 

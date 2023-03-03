@@ -7,6 +7,7 @@ import { LoginComponent } from './Login/login/login.component';
 import { NewcompComponent } from './info/newcomp.component';
 import { HistoryComponent } from './History/history/history.component';
 import { TestapiComponent } from './TestApi/testapi/testapi.component';
+import { DashbComponent } from './dashb/dashb.component';
 
 const routes: Routes = [
   {path:'', redirectTo:"login" ,pathMatch:'full'},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'info', component:NewcompComponent},
   {path:'empty', component:EmptyComponent},
   {path:'history', component:HistoryComponent},
-  {path:'testapi', component:TestapiComponent}
+  {path:'testapi', component:TestapiComponent},
+  { path:'dashb', component:DashbComponent}
 
 ];
 
